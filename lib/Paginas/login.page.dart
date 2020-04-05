@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:seekpet_app/Paginas/cadastro.page.dart';
+import 'package:seekpet_app/Paginas/reset.password.dart';
 
 // Página de login
 
@@ -42,6 +43,7 @@ class LoginPage extends StatelessWidget {
               style: TextStyle(
                 // tamanho da fonte
                 fontSize: 20,
+                color: Colors.black45,
               ),
             ),
             SizedBox(
@@ -60,8 +62,10 @@ class LoginPage extends StatelessWidget {
               ),
               style: TextStyle(
                 fontSize: 20,
+                color: Colors.black45,
               ),
             ),
+
             Container(
               // container botão de recuperar a senha
               height: 40, // altura do container
@@ -69,10 +73,17 @@ class LoginPage extends StatelessWidget {
               child: FlatButton(
                 // botão para recuperar a senha
                 child: Text(
-                  "Recuperar Senha",
-                  textAlign: TextAlign.right,
+                  "Esqueci minha Senha",
+                  textAlign: TextAlign.center,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ResetPassword(),
+                    ),
+                  );
+                },
               ),
             ),
             // >> Aidiconar aqui a caixa para "CONTINUAR CONECTADO"
@@ -80,9 +91,10 @@ class LoginPage extends StatelessWidget {
               // altura do botão entrar
               height: 10,
             ),
+
             Container(
               height: 60,
-              alignment: Alignment.centerLeft,
+              // alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -99,53 +111,50 @@ class LoginPage extends StatelessWidget {
                   Radius.circular(20),
                 ),
               ),
-              child: SizedBox.expand(
-                  // pega todo conteúdo do container
-                  child: FlatButton(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment
-                      .spaceBetween, // preenche os espaços vazios dentro do container (botão "Entrar")
-                  children: <Widget>[
-                    // texto no botão
-                    Text(
-                      "Entrar",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 20,
+              child: SizedBox(
+                // pega todo conteúdo do container
+                child: FlatButton(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment
+                        .spaceBetween, // preenche os espaços vazios dentro do container (botão "Entrar")
+                    children: <Widget>[
+                      // texto no botão
+                      Text(
+                        "Entrar",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                        textAlign: TextAlign.left,
                       ),
-                      textAlign: TextAlign.left,
-                    ),
-                    Container(
-                      // imagem no botão "Entrar"
-                      child: Image.asset("assets/pata.png"),
-                      height: 28,
-                      width: 28,
-                    ),
-                  ],
+                      Container(
+                        // imagem no botão "Entrar"
+                        child: Image.asset("assets/pata.png"),
+                        height: 28,
+                        width: 28,
+                      ),
+                    ],
+                  ),
+                  onPressed: () => {},
                 ),
-                onPressed: () => {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          // builder: (context) => ,
-                          ))
-                },
-              )),
+              ),
             ),
             SizedBox(
               height: 28,
             ),
             Container(
-                height: 40,
-                child: Text(
-                  "_____________________ ou _____________________",
-                  textAlign: TextAlign.center,
-                )),
+              height: 40,
+              child: Text(
+                "_____________________ ou _____________________",
+                textAlign: TextAlign.center,
+              ),
+            ),
             SizedBox(
               // botão entrar com facebook
               height: 1,
             ),
+
             Container(
               height: 60,
               alignment: Alignment.centerLeft,
@@ -193,30 +202,31 @@ class LoginPage extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
               child: SizedBox.expand(
-                  child: FlatButton(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text(
-                      "Entrar com Gmail",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 20,
+                child: FlatButton(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(
+                        "Entrar com Gmail",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                        textAlign: TextAlign.left,
                       ),
-                      textAlign: TextAlign.left,
-                    ),
-                    Container(
-                      child: SizedBox(
-                        child: Image.asset("assets/gmail.png"),
-                        height: 28,
-                        width: 28,
-                      ),
-                    )
-                  ],
+                      Container(
+                        child: SizedBox(
+                          child: Image.asset("assets/gmail.png"),
+                          height: 28,
+                          width: 28,
+                        ),
+                      )
+                    ],
+                  ),
+                  onPressed: () {},
                 ),
-                onPressed: () {},
-              )),
+              ),
             ),
             SizedBox(
               // Início da função "Cadastre-se"

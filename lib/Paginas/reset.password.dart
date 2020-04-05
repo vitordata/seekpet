@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
-// Página 2 de cadastro
-
-class CadastroSeguinte extends StatelessWidget {
+class ResetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // appBar do botão voltar
         backgroundColor: Colors.white,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -16,61 +14,63 @@ class CadastroSeguinte extends StatelessWidget {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.only(
-          top: 20,
-          left: 40,
-          right: 40,
-        ),
+        // contém as informações da tela
+        padding: EdgeInsets.only(top: 60, left: 40, right: 40),
         color: Colors.white,
         child: ListView(
           children: <Widget>[
             SizedBox(
-              width: 128,
-              height: 128,
-              child: Image.asset(
-                  "assets/logo.png"), // local onde está localizada a logo
+              width: 200,
+              height: 200,
+              child: Image.asset("assets/resetpassword.png"),
             ),
             SizedBox(
-              height: 40,
+              height: 20,
+            ),
+            Text(
+              "Esqueceu sua senha?",
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.w500,
+                //color: Colors.black54, // decidir se a cor da fonte será preta ou cinza escuro
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Por gentileza, informe o E-mail assosiado a sua conta que enviaremos um código de recuperação.",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: Colors.black45,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 50,
             ),
             TextFormField(
               autofocus: true,
-              keyboardType: TextInputType.number,
+              keyboardType:
+                  TextInputType.emailAddress, // aparece o @ no teclado
               decoration: InputDecoration(
-                labelText: "CEP",
+                // cria efeito quando clica na label
+                labelText: "E-mail", // mostra o nome dentro da label
                 labelStyle: TextStyle(
-                  color: Colors.black38, // cor da label "CEP"
+                  color: Colors.black38, // cor da label "E-mail"
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
               ),
               style: TextStyle(
-                // tamanho da fonte
-                fontSize: 20,
+                fontSize: 20, // tamanho da fonte
                 color: Colors.black45,
               ),
             ),
             SizedBox(
-              // campo para inserir endereço
-              height: 10,
-            ),
-            TextFormField(
-              keyboardType: TextInputType.text,
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: "Endereço",
-                labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.black45,
-              ),
-            ),
-            SizedBox(
+              // inicio do botão "Enviar"
               height: 80,
             ),
             Container(
@@ -82,13 +82,13 @@ class CadastroSeguinte extends StatelessWidget {
                   end: Alignment.bottomRight,
                   stops: [0.2, 1],
                   colors: [
-                    // cores degradê do botão "Próximo"
+                    // cores degradê do botão "Enviar"
                     Color(0xFFF00c138),
                     Color(0XFFF00d8a2),
                   ],
                 ),
                 borderRadius: BorderRadius.all(
-                  // borda do botão "Próximo"
+                  // borda do botão "Enviar"
                   Radius.circular(20),
                 ),
               ),
@@ -97,11 +97,11 @@ class CadastroSeguinte extends StatelessWidget {
                 child: FlatButton(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment
-                        .spaceBetween, // preenche os espaços vazios dentro do container (botão "Próximo")
+                        .spaceBetween, // preenche os espaços vazios dentro do container (botão "Enviar")
                     children: <Widget>[
                       // texto no botão
                       Text(
-                        "Próximo",
+                        "Enviar",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
@@ -122,20 +122,8 @@ class CadastroSeguinte extends StatelessWidget {
               ),
             ),
             SizedBox(
-              // ínicio da função "cancelar"
               height: 20,
-            ),
-            Container(
-              height: 40,
-              alignment: Alignment.center,
-              child: FlatButton(
-                child: Text(
-                  "Cancelar",
-                  textAlign: TextAlign.center,
-                ),
-                onPressed: () => Navigator.pop(context, false),
-              ),
-            ),
+            )
           ],
         ),
       ),

@@ -8,6 +8,14 @@ class CadastroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          color: Colors.black45,
+          onPressed: () => Navigator.pop(context, false),
+        ),
+      ),
       body: Container(
         padding: EdgeInsets.only(
           top: 20,
@@ -17,12 +25,62 @@ class CadastroPage extends StatelessWidget {
         color: Colors.white,
         child: ListView(
           children: <Widget>[
-            SizedBox(
-              width: 128,
-              height: 128,
-              child: Image.asset(
-                  "assets/logo.png"), // local onde está localizada a logo
+            Container(
+              // Container para o usuário adicionar foto de perfil
+              width: 150,
+              height: 150,
+              alignment: Alignment(0.3, 1),
+              decoration: new BoxDecoration(
+                  image: new DecorationImage(
+                // imagem fica na frente do container
+                image: AssetImage("assets/useraddphoto.png"), // imagem usuário
+                fit: BoxFit.fitHeight,
+              )),
+              child: Container(
+                // container com o ícone "add"
+                height: 56,
+                width: 56,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    stops: [0.3, 1.0],
+                    colors: [
+                      // cores degradê do ícone
+                      Color(0xFFF00c138),
+                      Color(0XFFF00d8a2),
+                    ],
+                  ),
+                  border: Border.all(
+                    width: 4.0,
+                    color: const Color(0xFFFFFFF), // borda branca
+                  ),
+                  borderRadius: BorderRadius.all(
+                    // efeito de borda redonda (raio)
+                    Radius.circular(56),
+                  ),
+                ),
+                child: SizedBox(
+                  child: FlatButton(
+                    padding: EdgeInsets.all(
+                        0), // alinha o icone "+" no centro do container
+                    // botão para add
+                    child: Icon(
+                      (Icons.add),
+                      color: Colors.white,
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+              ),
             ),
+            //   SizedBox(
+            //    width: 128,
+            //     height: 128,
+            //     child: Image.asset(
+            //      "assets/logo.png"), // local onde está localizada a logo
+            //   ),
             SizedBox(
               height: 40,
             ),
@@ -40,6 +98,7 @@ class CadastroPage extends StatelessWidget {
               style: TextStyle(
                 // tamanho da fonte
                 fontSize: 20,
+                color: Colors.black45,
               ),
             ),
             SizedBox(
@@ -60,6 +119,7 @@ class CadastroPage extends StatelessWidget {
               style: TextStyle(
                 // tamanho da fonte
                 fontSize: 20,
+                color: Colors.black45,
               ),
             ),
             SizedBox(
@@ -79,6 +139,7 @@ class CadastroPage extends StatelessWidget {
               ),
               style: TextStyle(
                 fontSize: 20,
+                color: Colors.black45,
               ),
             ),
             SizedBox(
@@ -98,6 +159,7 @@ class CadastroPage extends StatelessWidget {
               ),
               style: TextStyle(
                 fontSize: 20,
+                color: Colors.black45,
               ),
             ),
             SizedBox(
@@ -123,41 +185,55 @@ class CadastroPage extends StatelessWidget {
                 ),
               ),
               child: SizedBox.expand(
-                  // pega todo conteúdo do container
-                  child: FlatButton(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment
-                      .spaceBetween, // preenche os espaços vazios dentro do container (botão "Próximo")
-                  children: <Widget>[
-                    // texto no botão
-                    Text(
-                      "Próximo",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 20,
+                // pega todo conteúdo do container
+                child: FlatButton(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment
+                        .spaceBetween, // preenche os espaços vazios dentro do container (botão "Próximo")
+                    children: <Widget>[
+                      // texto no botão
+                      Text(
+                        "Próximo",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                        textAlign: TextAlign.left,
                       ),
-                      textAlign: TextAlign.left,
-                    ),
-                    Container(
-                      // imagem no botão "Próximo"
-                      child: Image.asset("assets/pata.png"),
-                      height: 28,
-                      width: 28,
-                    ),
-                  ],
-                ),
-                onPressed: () => {
-                  Navigator.push(
+                      Container(
+                        // imagem no botão "Próximo"
+                        child: Image.asset("assets/pata.png"),
+                        height: 28,
+                        width: 28,
+                      ),
+                    ],
+                  ),
+                  onPressed: () => {
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => CadastroPage2(),
-                      ))
-                },
-              )),
+                        builder: (context) => CadastroSeguinte(),
+                      ),
+                    ),
+                  },
+                ),
+              ),
             ),
             SizedBox(
-              height: 28,
+              // ínicio da função "cancelar"
+              height: 20,
+            ),
+            Container(
+              height: 40,
+              alignment: Alignment.center,
+              child: FlatButton(
+                child: Text(
+                  "Cancelar",
+                  textAlign: TextAlign.center,
+                ),
+                onPressed: () => Navigator.pop(context, false),
+              ),
             ),
           ],
         ),
