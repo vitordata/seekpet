@@ -3,13 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:seekpet_app/Paginas/cadastro.page.dart';
 
 class LoginPage extends StatelessWidget {
-  bool Lembrar = false;
-  void onChanged(bool value) {
-    setState() {
-      Lembrar = value;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
