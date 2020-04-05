@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+// Página 1 de cadastro
+
 class CadastroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
