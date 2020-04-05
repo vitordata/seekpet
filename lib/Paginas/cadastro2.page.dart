@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:seekpet_app/Paginas/cadastro2.page.dart';
 
-// Página 1 de cadastro
+// Página 2 de cadastro
 
-class CadastroPage extends StatelessWidget {
+class CadastroPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,11 +27,11 @@ class CadastroPage extends StatelessWidget {
             ),
             TextFormField(
               autofocus: true,
-              keyboardType: TextInputType.text,
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                labelText: "Insira seu Nome",
+                labelText: "CEP",
                 labelStyle: TextStyle(
-                  color: Colors.black38, // cor da label "Nome"
+                  color: Colors.black38, // cor da label "CEP"
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
@@ -43,53 +42,14 @@ class CadastroPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
-            ),
-            TextFormField(
-              autofocus: true,
-              keyboardType:
-                  TextInputType.emailAddress, // aparece o @ no teclado
-              decoration: InputDecoration(
-                labelText: "Insira seu E-mail",
-                labelStyle: TextStyle(
-                  color: Colors.black38, // cor da label "E-mail"
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
-              ),
-              style: TextStyle(
-                // tamanho da fonte
-                fontSize: 20,
-              ),
-            ),
-            SizedBox(
-              // campo para inserir a senha
+              // campo para inserir endereço
               height: 10,
             ),
             TextFormField(
               keyboardType: TextInputType.text,
               obscureText: true,
               decoration: InputDecoration(
-                labelText: "Insira sua Senha",
-                labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-            SizedBox(
-              // campo para data de nascimento
-              height: 10,
-            ),
-            TextFormField(
-              keyboardType: TextInputType.text,
-              // obscureText: true,
-              decoration: InputDecoration(
-                labelText: "Data de Nascimento",
+                labelText: "Endereço",
                 labelStyle: TextStyle(
                   color: Colors.black38,
                   fontWeight: FontWeight.w400,
@@ -147,13 +107,7 @@ class CadastroPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                onPressed: () => {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => CadastroPage2(),
-                      ))
-                },
+                onPressed: () => {},
               )),
             ),
             SizedBox(
