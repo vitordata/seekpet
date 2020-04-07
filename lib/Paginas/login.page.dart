@@ -93,7 +93,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 60,
+                      height: 20,
                     ),
                     Container(
                       height: 60,
@@ -225,13 +225,9 @@ class LoginPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      // Início da função "Cadastre-se"
-                      height: 100,
-                    ),
                     Container(
                       // botão cadastre-se
-                      //height: 20,
+                      // height: 200,
                       child: FlatButton(
                         child: Text(
                           "Cadastre-se",

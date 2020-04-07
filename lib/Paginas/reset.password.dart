@@ -40,7 +40,7 @@ class ResetPassword extends StatelessWidget {
               height: 10,
             ),
             Text(
-              "Por gentileza, informe o E-mail assosiado a sua conta que enviaremos um código de recuperação.",
+              "Por gentileza, informe o E-mail associado a sua conta que enviaremos um código de recuperação.",
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w400,

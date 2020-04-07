@@ -28,7 +28,7 @@ class CadastroSeguinte extends StatelessWidget {
               width: 128,
               height: 128,
               child: Image.asset(
-                  "assets/logo.png"), // local onde está localizada a logo
+                  "assets/casa.png"), // local onde está localizada a logo
             ),
             SizedBox(
               height: 40,

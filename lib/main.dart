@@ -27,13 +27,15 @@ class HomePage extends StatelessWidget {
         body: Center(
             child: Container(
           decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
-                  colors: [Colors.blue, Colors.red])),
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [Colors.blue, Colors.red],
+            ),
+          ),
           child: Center(
             child: Text(
-              'Hello Gradient!',
+              'Teste de backgroung gradiente!',
               style: TextStyle(
                   fontSize: 48.0,
                   fontWeight: FontWeight.bold,

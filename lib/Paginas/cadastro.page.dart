@@ -85,7 +85,8 @@ class CadastroPage extends StatelessWidget {
               height: 40,
             ),
             TextFormField(
-              // autofocus: true, // permite o teclado iniciar automaticamente após acessar a página
+              autofocus:
+                  true, // permite o teclado iniciar automaticamente após acessar a página
               keyboardType: TextInputType.text,
               decoration: InputDecoration(
                 labelText: "Insira seu Nome",
