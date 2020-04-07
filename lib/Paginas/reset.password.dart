@@ -52,7 +52,7 @@ class ResetPassword extends StatelessWidget {
               height: 50,
             ),
             TextFormField(
-              autofocus: true,
+              //autofocus: true, // permite o teclado iniciar automaticamente após acessar a página
               keyboardType:
                   TextInputType.emailAddress, // aparece o @ no teclado
               decoration: InputDecoration(

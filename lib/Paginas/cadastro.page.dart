@@ -85,7 +85,7 @@ class CadastroPage extends StatelessWidget {
               height: 40,
             ),
             TextFormField(
-              autofocus: true,
+              // autofocus: true, // permite o teclado iniciar automaticamente após acessar a página
               keyboardType: TextInputType.text,
               decoration: InputDecoration(
                 labelText: "Insira seu Nome",
@@ -105,7 +105,7 @@ class CadastroPage extends StatelessWidget {
               height: 10,
             ),
             TextFormField(
-              autofocus: true,
+              // autofocus: true, // permite o teclado iniciar automaticamente após acessar a página
               keyboardType:
                   TextInputType.emailAddress, // aparece o @ no teclado
               decoration: InputDecoration(

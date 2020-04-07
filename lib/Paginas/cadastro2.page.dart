@@ -56,7 +56,6 @@ class CadastroSeguinte extends StatelessWidget {
             ),
             TextFormField(
               keyboardType: TextInputType.text,
-              obscureText: true,
               decoration: InputDecoration(
                 labelText: "Endereço",
                 labelStyle: TextStyle(
