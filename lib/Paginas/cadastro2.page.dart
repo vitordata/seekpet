@@ -34,19 +34,19 @@ class CadastroSeguinte extends StatelessWidget {
               height: 40,
             ),
             TextFormField(
-              autofocus: true,
+              // autofocus: true,
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 labelText: "CEP",
                 labelStyle: TextStyle(
                   color: Colors.black38, // cor da label "CEP"
                   fontWeight: FontWeight.w400,
-                  fontSize: 20,
+                  fontSize: 15,
                 ),
               ),
               style: TextStyle(
                 // tamanho da fonte
-                fontSize: 20,
+                fontSize: 15,
                 color: Colors.black45,
               ),
             ),
@@ -61,7 +61,7 @@ class CadastroSeguinte extends StatelessWidget {
                 labelStyle: TextStyle(
                   color: Colors.black38,
                   fontWeight: FontWeight.w400,
-                  fontSize: 20,
+                  fontSize: 15,
                 ),
               ),
               style: TextStyle(
@@ -122,10 +122,10 @@ class CadastroSeguinte extends StatelessWidget {
             ),
             SizedBox(
               // ínicio da função "cancelar"
-              height: 20,
+              height: 190,
             ),
             Container(
-              height: 40,
+              height: 90,
               alignment: Alignment.center,
               child: FlatButton(
                 child: Text(

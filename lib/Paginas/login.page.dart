@@ -19,7 +19,7 @@ class LoginPage extends StatelessWidget {
               // permite definir margens nos 4 cantos da tela
               top: 70,
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 50, horizontal: 28),
+                padding: EdgeInsets.symmetric(vertical: 00, horizontal: 38),
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
                 decoration: BoxDecoration(
@@ -35,7 +35,7 @@ class LoginPage extends StatelessWidget {
                       // tamanho da imagem
                       width: 150,
                       height: 150,
-                      child: Image.asset("assets/resetpassword.png"),
+                      child: Image.asset("assets/casa.png"),
                     ),
                     SizedBox(
                       height: 50,
@@ -169,7 +169,8 @@ class LoginPage extends StatelessWidget {
                           child: SizedBox(
                             child: FlatButton(
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: <Widget>[
                                   Text(
                                     "Facebook",
@@ -207,7 +208,8 @@ class LoginPage extends StatelessWidget {
                           child: SizedBox(
                             child: FlatButton(
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: <Widget>[
                                   Text(
                                     "Gmail",
@@ -230,6 +232,9 @@ class LoginPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                    SizedBox(
+                      height: 90,
+                    ),
                     Container(
                       // botão cadastre-se
                       child: FlatButton(
@@ -243,7 +248,7 @@ class LoginPage extends StatelessWidget {
                             MaterialPageRoute(
                               builder: (context) => CadastroPage(),
                             ),
-                          )
+                          ),
                         },
                       ),
                     ),
