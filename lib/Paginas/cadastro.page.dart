@@ -216,7 +216,7 @@ class CadastroPage extends StatelessWidget {
                       MaterialPageRoute(
                         builder: (context) => CadastroSeguinte(),
                       ),
-                    ),
+                    )
                   },
                 ),
               ),
