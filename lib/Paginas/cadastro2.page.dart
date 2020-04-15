@@ -25,8 +25,8 @@ class CadastroSeguinte extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             SizedBox(
-              width: 128,
-              height: 128,
+              width: 100,
+              height: 100,
               child: Image.asset(
                   "assets/casa.png"), // local onde está localizada a logo
             ),

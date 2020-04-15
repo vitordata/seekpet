@@ -35,7 +35,7 @@ class LoginPage extends StatelessWidget {
                       // tamanho da imagem
                       width: 150,
                       height: 150,
-                      child: Image.asset("assets/casa.png"),
+                      // child: Image.asset("assets/casa.png"),
                     ),
                     SizedBox(
                       height: 50,
